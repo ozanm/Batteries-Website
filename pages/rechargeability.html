@@ -43,12 +43,50 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h1>Generic</h1>
+										<h1>How They Become Rechargeable</h1>
 									</header>
-									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
-									<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+									<div class="box">
+										<div class="row">
+											<div style="width:50%;">
+												<p><strong>A rechargeable battery is a type of electrical battery that is comprised of one or more electrochemical cells. It is known as a secondary cell because its electrochemical reactions are electrically reversible. In other words, after the stored charge has been drained, the battery’s chemical reactions can occur again, in reverse, to store a new charge. The U.S. demand for rechargeable batteries is growing twice as fast as the demand for non-rechargeable batteries, in part because rechargeable batteries have lower environmental impact and total cost of use than do disposable batteries.</strong></p>
+												<p>Grid energy storage applications use rechargeable batteries for load-leveling. Load-leveling involves storing electric energy for use during peak load period. By charging batteries during periods of low electrical demand for use during periods of high demand, load-leveling helps eliminate the need for expensive peaking power plants and helps reduce the cost of generators over more hours of operation.</p>
+											</div>
+											<div style="width:50%;">
+												<span class="image fit"><img src="../images/gridbattery.png" alt="" /></span>
+											</div>
+										</div>
+									</div>
+									<div class="box">
+										<div class="row">
+											<div style="width:50%;">
+													<p><strong>Constructing a Rechargeable Battery</strong></p>
+													<p><strong>As with all batteries, rechargeable batteries consist of an anode, a cathode, and an electrolyte. During charging, the anode material is oxidized, producing electrons, and the cathode is reduced, consuming electrons.</strong></p>
+													<p>These electrons constitute the current flow in the external circuit. The electrolyte may serve as a simple buffer for internal ion flow between the electrodes, as in lithium-ion and nickel-cadmium cells, or it may be an active participant in the electrochemical reaction, as in lead-acid cells.</p>
+											</div>
+											<div style="width:50%;">
+												<span class="image fit"><img src="../images/rechargeablestructure.png" alt="" /></span>
+											</div>
+										</div>
+									</div>
+									<div style="padding-left: 20%; padding-right:20%; padding-top: 2.5%; padding-bottom: 5%;">
+										<select name="types" id="types-switcher">
+											<option value="Types of Rechargeable Batteries">- Types of Rechargeable Batteries -</option>
+											<option value="Lead-Acid Batteries">Lead-Acid Batteries</option>
+											<option value="Nickel-Metal Hydride Batteries">Nickel-Metal Hydride Batteries</option>
+											<option value="Lithium-Ion Batteries">Lithium-Ion Batteries</option>
+											<option value="Lithium-Ion Polymer Batteries">Lithium-Ion Polymer Batteries</option>
+											<option value="Alkaline Batteries">Alkaline Batteries</option>
+										</select>
+									</div>
+									<div class="box" id="type">
+										<div class="row">
+											<div style="width:50%;">
+												<p id="type_Title"></p>
+												<p id="type_Content"></p>
+											</div>
+											<span class="image fit" style="width:45%;"><img src="" alt="" id="type_Image" /></span>
+										</div>
+									</div>
 								</div>
 							</section>
 					</div>
@@ -62,6 +100,40 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+				let length = 6;
+
+				let images = {
+					"Types of Rechargeable Batteries": "types",
+					"Lead-Acid Batteries": "lead_acid",
+					"Nickel-Metal Hydride Batteries": "nickel_metal",
+					"Lithium-Ion Batteries": "lithium_ion",
+					"Lithium-Ion Polymer Batteries": "lithium_ion_polymer",
+					"Alkaline Batteries": "alkaline_batteries",
+				};
+
+				let descriptions = {
+					"Types of Rechargeable Batteries": "Several different combinations of chemicals are commonly used in rechargeable batteries. Different types include lead-acid, nickel-cadmium (NiCd), nickel-metal hydride (NiMH), lithium-ion (Li-ion), lithium-ion polymer (LiPo), and rechargeable alkaline batteries.",
+					"Lead-Acid Batteries": "Lead-acid batteries, invented in 1859 by French physicist Gaston Planté, are the oldest type of rechargeable battery. Their ability to supply high-surge currents means that the cells maintain a relatively large power-to-weight ratio. These features, along with their low cost, make them attractive for use in motor vehicles, which require high currents.",
+					"Nickel-Metal Hydride Batteries": "A nickel-metal hydride battery, abbreviated NiMH or Ni-MH, is very similar to the nickel-cadmium cell (NiCd). NiMH batteries use positive electrodes of nickel oxyhydroxide (NiOOH), as does the NiCd, but the negative electrodes use a hydrogen-absorbing alloy instead of cadmium. A NiMH battery can have two to three times the capacity of a NiCd battery of equivalent size, and its energy density approaches that of a lithium-ion cell.",
+					"Lithium-Ion Batteries": "The lithium-ion battery is a family of rechargeable batteries in which lithium ions move from the negative electrode to the positive electrode during discharge, and back when charging. The negative electrode of a conventional lithium-ion cell is made from carbon. The positive electrode is a metal oxide, and the electrolyte is a lithium salt in an organic solvent. They are one of the most popular types of rechargeable battery for portable electronics, with one of the best energy densities and only a slow loss of charge when not in use. Lithium ion batteries are more expensive than NiCd batteries but operate over a wider temperature range while being smaller and lighter. They are fragile and thus need a protective circuit to limit peak voltages.",
+					"Lithium-Ion Polymer Batteries": "Lithium-ion polymer (LiPo) batteries are usually composed of several identical secondary cells in parallel to increase the discharge-current capability. They are often available in series “packs” to increase the total available voltage. Their primary distinction from lithium-ion batteries is that their lithium salt electrolyte is not held in an organic solvent. Instead, it is in a solid polymer composite, such as polyethylene oxide or polyacrylonitrile. The advantages of LiPo over the lithium-ion design include potentially lower cost of manufacture, adaptability to a wide variety of packaging shapes, reliability, and ruggedness. Their major disadvantage is that they hold less charge.",
+					"Alkaline Batteries": "There are also rechargeable forms of alkaline batteries, which are a type of primary battery dependent upon the reaction between zinc (Zn) and manganese dioxide (MnO2). They are manufactured fully charged and have the ability to carry their charge for years, longer than most NiCd and NiMH batteries, which self-discharge. Rechargeable alkaline batteries can also have a high recharging efficiency and have less environmental impact than disposable cells.",
+				};
+
+				document.getElementById("types-switcher").onchange = () => {
+					update(document.getElementById("types-switcher").value);
+				}
+
+				function update(value) {
+					document.getElementById("type_Title").innerHTML = "<strong>" + value + "</strong>";
+					document.getElementById("type_Content").innerHTML = descriptions[value];
+					document.getElementById("type_Image").src = "../images/Rechargeable_Types/" + images[value] + ".png";
+				}
+
+				update("Types of Rechargeable Batteries");
+			</script>
 
 	</body>
 </html>
